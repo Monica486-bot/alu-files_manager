@@ -1,0 +1,27 @@
+{
+  "name": "files_manager",
+  "version": "1.0.0",
+  "description": "Files Manager API",
+  "main": "server.js",
+  "scripts": {
+    "start-server": "babel-node --presets @babel/preset-env server.js",
+    "start-worker": "babel-node --presets @babel/preset-env worker.js",
+    "dev": "nodemon --exec babel-node --presets @babel/preset-env"
+  },
+  "dependencies": {
+    "bull": "^4.10.4",
+    "express": "^4.18.2",
+    "image-thumbnail": "^1.0.10",
+    "mime-types": "^2.1.35",
+    "mongodb": "^4.13.0",
+    "redis": "^2.8.0",
+    "sha1": "^1.1.1",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.0",
+    "@babel/node": "^7.20.7",
+    "@babel/preset-env": "^7.21.0",
+    "nodemon": "^2.0.22"
+  }
+}
