@@ -5,8 +5,7 @@
     "node": true
   },
   "extends": [
-    "airbnb-base",
-    "plugin:jest/all"
+    "airbnb-base"
   ],
   "globals": {
     "Atomics": "readonly",
@@ -16,7 +15,6 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "plugins": ["jest"],
   "rules": {
     "no-console": "off",
     "no-shadow": "off",
