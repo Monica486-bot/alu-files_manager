@@ -12,15 +12,18 @@ class RedisClient {
   }
 
   async get(key) {
-    return promisify(this.client.get).bind(this.client)(key);
+    const getAsync = promisify(this.client.get).bind(this.client);
+    return getAsync(key);
   }
 
   async set(key, value, duration) {
-    return promisify(this.client.setex).bind(this.client)(key, duration, value);
+    const setAsync = promisify(this.client.set).bind(this.client);
+    await setAsync(key, value, 'EX', duration);
   }
 
   async del(key) {
-    return promisify(this.client.del).bind(this.client)(key);
+    const delAsync = promisify(this.client.del).bind(this.client);
+    return delAsync(key);
   }
 }
 
